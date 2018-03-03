@@ -35,8 +35,6 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  position: relative;
-  top: 0;
   margin-bottom: 100px; }
 
 h1 {
@@ -203,9 +201,10 @@ h1 {
       height: 15px;
       background: #7ab9ff;
       z-index: -1;
-      -webkit-animation: underlining 1s linear 2s forwards;
-              animation: underlining 1s linear 2s forwards; }
+      -webkit-animation: underlining 1s linear 2.5s forwards;
+              animation: underlining 1s linear 2.5s forwards; }
   .title__mac {
+    position: relative;
     width: 50%;
     max-width: 640px;
     height: 363px; }
@@ -217,11 +216,17 @@ h1 {
   .mac__layer1 {
     z-index: 4; }
   .mac__layer2 {
-    z-index: 3; }
+    z-index: 3;
+    -webkit-animation: parallax 23s linear 3s infinite;
+            animation: parallax 23s linear 3s infinite; }
   .mac__layer3 {
-    z-index: 2; }
+    z-index: 2;
+    -webkit-animation: parallax 18s linear 2s infinite;
+            animation: parallax 18s linear 2s infinite; }
   .mac__layer4 {
-    z-index: 1; }
+    z-index: 1;
+    -webkit-animation: parallax 8s linear 2s infinite;
+            animation: parallax 8s linear 2s infinite; }
   .mac__video {
     position: relative;
     top: 80px;
@@ -260,7 +265,6 @@ h1 {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
-    position: relative;
     height: 255px;
     -webkit-flex-basis: 640px;
         -ms-flex-preferred-size: 640px;
@@ -279,16 +283,22 @@ h1 {
             box-sizing: border-box;
     -webkit-box-shadow: 0 50px 30px 0 rgba(29, 33, 43, 0.25);
             box-shadow: 0 50px 30px 0 rgba(29, 33, 43, 0.25);
-    -webkit-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out; }
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
     .navigation__style:nth-child(1) {
       margin-right: 40px; }
     .navigation__style p {
       margin: 15px 0; }
   .navigation__partner {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
     background: url("../img/img-button-1.png") no-repeat; }
   .navigation__advertiser {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
     background: url("../img/img-button-2.png") no-repeat; }
 
 .navigation__partner:hover, .navigation__advertiser:hover {
@@ -330,3 +340,49 @@ h1 {
     width: 0; }
   to {
     width: 98%; } }
+
+@-webkit-keyframes parallax {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  15% {
+    -webkit-transform: translate(-3px, 2px);
+            transform: translate(-3px, 2px); }
+  30% {
+    -webkit-transform: translate(-5px, -2px);
+            transform: translate(-5px, -2px); }
+  50% {
+    -webkit-transform: translate(2px, -6px);
+            transform: translate(2px, -6px); }
+  65% {
+    -webkit-transform: translate(6px, 2px);
+            transform: translate(6px, 2px); }
+  80% {
+    -webkit-transform: translate(3px, 6px);
+            transform: translate(3px, 6px); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }
+
+@keyframes parallax {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  15% {
+    -webkit-transform: translate(-3px, 2px);
+            transform: translate(-3px, 2px); }
+  30% {
+    -webkit-transform: translate(-5px, -2px);
+            transform: translate(-5px, -2px); }
+  50% {
+    -webkit-transform: translate(2px, -6px);
+            transform: translate(2px, -6px); }
+  65% {
+    -webkit-transform: translate(6px, 2px);
+            transform: translate(6px, 2px); }
+  80% {
+    -webkit-transform: translate(3px, 6px);
+            transform: translate(3px, 6px); }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); } }

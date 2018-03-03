@@ -29,8 +29,6 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  top: 0;
   margin-bottom: 100px;
 }
 h1{
@@ -171,10 +169,11 @@ h1{
         height: 15px;
         background: #7ab9ff;
         z-index: -1;
-        animation: underlining 1s linear 2s forwards;
+        animation: underlining 1s linear 2.5s forwards;
       }
     }
     &__mac{
+      position: relative;
       width: 50%;
       max-width: 640px;
       height: 363px;
@@ -191,12 +190,15 @@ h1{
       }
       &2{
         z-index: 3;
+        animation: parallax 23s linear 3s infinite ;
       }
       &3{
         z-index: 2;
+        animation: parallax 18s linear 2s infinite ;
       }
       &4{
         z-index: 1;
+        animation: parallax 8s linear 2s infinite ;
       }
     }
     &__video{
@@ -217,7 +219,6 @@ h1{
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      position: relative;
       height: 255px;
       flex-basis: 640px;
       max-width: 640px;
@@ -230,7 +231,7 @@ h1{
       cursor: pointer;
       box-sizing: border-box;
       box-shadow: 0 50px 30px 0 rgba(29,33,43,0.25);
-      transition: all 0.5s ease-in-out ;
+      transition: all 0.5s linear ;
       &:nth-child(1){
         margin-right: 40px;
       }
@@ -239,9 +240,11 @@ h1{
       }
     }
     &__partner{
+      transform: translateY(0);
       background: url("../img/img-button-1.png")  no-repeat;
     }
     &__advertiser{
+      transform: translateY(0);
       background: url("../img/img-button-2.png") no-repeat;
     }
   }
@@ -271,11 +274,18 @@ h1{
   }
 
 
-
-
-
+// анимации
 
 @keyframes underlining {
   from { width: 0;}
   to { width: 98% ;}
+}
+@keyframes parallax {
+  0%{ transform:translate(0,0)}
+  15%{ transform:translate(-3px,2px)}
+  30%{ transform:translate(-5px,-2px)}
+  50%{ transform:translate(2px,-6px)}
+  65%{ transform:translate(6px,2px)}
+  80%{ transform:translate(3px,6px)}
+  100%{ transform:translate(0,0)}
 }
