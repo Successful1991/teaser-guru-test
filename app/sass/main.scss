@@ -1,6 +1,9 @@
 @font-face {
   font-family: Roboto;
-  src: url('../font/roboto.ttf');
+  src: url('../font/Roboto.woff?#iefix') format('woff'),
+  url('../font/Roboto.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'Gotham Pro Medium';
@@ -98,7 +101,6 @@ h1{
     line-height: 85px;
   }
 }
-
 .list__item{
   display: flex;
   flex-direction: column;
@@ -122,7 +124,6 @@ h1{
     }
   }
 }
-
 #menu__burger {
     display: none;
     &:checked+label {
@@ -144,10 +145,7 @@ h1{
       }
     }
   }
-
-
 //section title
-
 .title{
     display: flex;
     justify-content: space-between;
@@ -167,7 +165,7 @@ h1{
         content: "";
         display: block;
         position: absolute;
-        bottom: 10px;
+        bottom: 11px;
         left: 1%;
         width: 0;
         height: 15px;
@@ -222,6 +220,7 @@ h1{
       position: relative;
       height: 255px;
       flex-basis: 640px;
+      max-width: 640px;
       flex-shrink: 1;
       font-size: 36px;
       font-family: "Gotham Pro";
@@ -276,7 +275,7 @@ h1{
 
 
 
-  @keyframes underlining {
-    from { width: 0;}
-    to { width: 98% ;}
-  }
+@keyframes underlining {
+  from { width: 0;}
+  to { width: 98% ;}
+}
