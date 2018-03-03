@@ -13,7 +13,8 @@ body {
   min-height: 96vh;
   margin: 0;
   padding-top: 30px;
-  background: url("../img/img-text-guru.jpg") bottom left no-repeat; }
+  background: url("../img/img-text-guru.jpg") bottom left no-repeat;
+  overflow: hidden; }
 
 .page-height {
   max-width: 1370px;
