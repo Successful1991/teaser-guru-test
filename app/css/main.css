@@ -2,8 +2,16 @@
   font-family: Roboto;
   src: url("../font/roboto.ttf"); }
 
+@font-face {
+  font-family: 'Gotham Pro Medium';
+  src: url("../font/GothamPro-Medium.eot");
+  src: url("../font/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("../font/GothamPro-Medium.woff") format("woff"), url("../font/GothamPro-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  min-height: 100vh;
+  min-height: 96vh;
+  margin: 0;
   padding-top: 30px;
   background: url("../img/img-text-guru.jpg") bottom left no-repeat; }
 
@@ -24,28 +32,143 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 140px; }
+  position: relative;
+  top: 0;
+  margin-bottom: 100px; }
 
 h1 {
   font-size: 60px;
-  font-family: "Gotham Pro";
+  font-family: "Gotham Pro Medium";
   font-weight: bold;
   color: #202020;
   letter-spacing: -2px; }
 
 .heading__menu {
+  position: relative;
   width: 30px;
-  height: auto; }
+  height: auto;
+  z-index: 1001; }
+  .heading__menu > label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+    .heading__menu > label .burger:first-child {
+      top: 0; }
+    .heading__menu > label .burger:nth-child(2) {
+      top: 7px; }
+    .heading__menu > label .burger:nth-child(3) {
+      top: 14px; }
 
-.menu__burger {
+.burger {
+  position: absolute;
   background: #7ab9ff;
   height: 3px;
   width: 30px;
-  margin-bottom: 4px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
 
 .menu {
-  position: fixed; }
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: #2e3438;
+  z-index: 1000; }
+  .menu__img {
+    width: 50%;
+    height: 100%;
+    background: url("../img/img-menu-bg.jpg") no-repeat; }
+  .menu__list {
+    width: 50%;
+    height: 100%;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 28px;
+    font-family: "Gotham Pro Medium";
+    line-height: 85px; }
+
+.list__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .list__item::after {
+    content: " ";
+    margin: 0 auto;
+    height: 0;
+    width: 30px;
+    border: 1px solid #7ab9ff; }
+  .list__item:nth-last-child(1)::after {
+    border: none; }
+  .list__item > .item__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff; }
+    .list__item > .item__link:hover {
+      font-weight: 700;
+      letter-spacing: 1.1px; }
+
+#menu__burger {
+  display: none; }
+  #menu__burger:checked + label .burger:first-child {
+    opacity: 0;
+    top: 20px;
+    width: 0;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  #menu__burger:checked + label .burger:nth-child(2) {
+    top: 12px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 35px; }
+  #menu__burger:checked + label .burger:nth-child(3) {
+    top: 12px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 35px; }
 
 .title {
   display: -webkit-box;
@@ -64,9 +187,25 @@ h1 {
     font-size: 18px;
     color: #6d6963;
     font-weight: 300; }
+    .title__text-underlining {
+      position: relative;
+      z-index: 1; }
+    .title__text-underlining::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 1%;
+      width: 0;
+      height: 15px;
+      background: #7ab9ff;
+      z-index: -1;
+      -webkit-animation: underlining 1s linear 2s forwards;
+              animation: underlining 1s linear 2s forwards; }
   .title__mac {
     width: 50%;
-    max-width: 640px; }
+    max-width: 640px;
+    height: 363px; }
 
 .mac {
   position: absolute; }
@@ -84,6 +223,12 @@ h1 {
     position: relative;
     top: 80px;
     left: 105px; }
+
+.mac__layer0, .mac__layer1, .mac__layer2, .mac__layer3, .mac__layer4 {
+  display: block;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
 
 .navigation {
   display: -webkit-box;
@@ -112,8 +257,14 @@ h1 {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
+    position: relative;
     height: 255px;
-    width: 640px;
+    -webkit-flex-basis: 640px;
+        -ms-flex-preferred-size: 640px;
+            flex-basis: 640px;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
     font-size: 36px;
     font-family: "Gotham Pro";
     color: #ffffff;
@@ -127,6 +278,8 @@ h1 {
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out; }
+    .navigation__style:nth-child(1) {
+      margin-right: 40px; }
     .navigation__style p {
       margin: 15px 0; }
   .navigation__partner {
@@ -161,3 +314,15 @@ h1 {
   -webkit-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
+
+@-webkit-keyframes underlining {
+  from {
+    width: 0; }
+  to {
+    width: 98%; } }
+
+@keyframes underlining {
+  from {
+    width: 0; }
+  to {
+    width: 98%; } }
