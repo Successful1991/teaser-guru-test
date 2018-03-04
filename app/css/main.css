@@ -35,7 +35,8 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  z-index: 1005; }
   .heading__logo {
     display: -webkit-box;
     display: -webkit-flex;
