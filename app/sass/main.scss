@@ -15,7 +15,7 @@
   font-style: normal;
 }
 body{
-  min-height: 96vh;
+  height: 96vh;
   margin: 0;
   padding-top: 30px;
   background: url("../img/img-text-guru.jpg") bottom left no-repeat;
@@ -30,6 +30,13 @@ body{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 100px;
+  &__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+  }
 }
 h1{
   font-size: 60px;
@@ -59,7 +66,6 @@ h1{
     .burger:nth-child(3) {
       top: 14px;
     }
-
   }
 }
 .burger{
@@ -68,7 +74,7 @@ h1{
   height: 3px;
   width: 30px;
   border-radius: 4px;
-  transition: all .5s;
+  transition: all 1s;
 }
 .menu{
   display: none;
@@ -82,6 +88,7 @@ h1{
   background: #2e3438;
   z-index: 1000;
   &__img{
+    display: block;
     width: 50%;
     height: 100%;
     background: url("../img/img-menu-bg.jpg") no-repeat;
@@ -96,15 +103,16 @@ h1{
     align-items: center;
     font-size: 28px;
     font-family: "Gotham Pro Medium";
-    line-height: 85px;
   }
 }
 .list__item{
   display: flex;
   flex-direction: column;
+  height: 85px;
+  justify-content: center;
   &::after{
-    content: " ";
-    margin: 0 auto;
+    content: "";
+    margin: 25px auto;
     height: 0;
     width: 30px;
     border: 1px solid #7ab9ff;
@@ -112,10 +120,11 @@ h1{
   &:nth-last-child(1)::after{
     border: none;
   }
-  > .item__link{
+   .item__link{
+     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
-    color: #ffffff;
+
     &:hover{
       font-weight: 700;
       letter-spacing: 1.1px;
@@ -208,8 +217,7 @@ h1{
     }
   }
 .mac__layer0,.mac__layer1,.mac__layer2,.mac__layer3,.mac__layer4{
-    display: block;
-    transform: scale(1);
+  display: block;
   }
 .navigation{
     display: flex;
@@ -240,11 +248,9 @@ h1{
       }
     }
     &__partner{
-      transform: translateY(0);
       background: url("../img/img-button-1.png")  no-repeat;
     }
     &__advertiser{
-      transform: translateY(0);
       background: url("../img/img-button-2.png") no-repeat;
     }
   }
