@@ -13,13 +13,20 @@
     <div class="menu__img"></div>
     <ul class="menu__list">
         <li class="list__item"><a href="#" class="item__link">Главная</a></li>
+        <li class="list__item-underlining"></li>
         <li class="list__item"><a href="" class="item__link">Рекламодатель</a></li>
+        <li class="list__item-underlining"></li>
         <li class="list__item"><a href="" class="item__link">Партнер</a></li>
+        <li class="list__item-underlining"></li>
         <li class="list__item"><a href="" class="item__link">О нас</a></li>
     </ul>
 </nav>
 <header class="page-height heading">
-    <div class="heading__logo"><img src="app/img/logo.png" alt="TEASERGURU"></div>
+    <div class="heading__logo-mobile"></div>
+    <div class="heading__logo">
+        <img src="app/img/logo.png" alt="TEASERGURU"  class="heading__logo-img">
+        <p class="heading__logo-name">menu</p>
+    </div>
     <div class="heading__menu">
         <input type="checkbox" id="menu__burger" />
         <label for="menu__burger">
@@ -28,7 +35,6 @@
             <div class="burger"></div>
         </label>
     </div>
-
 </header>
 <section class="page-height title">
     <div class="title__text">
@@ -42,17 +48,23 @@
         <img src="app/img/img-parallax-2.png" class="mac mac__layer2" alt="">
         <img src="app/img/img-parallax-3.png" class="mac mac__layer3" alt="">
         <img src="app/img/img-parallax-4.png" class="mac mac__layer4" alt="">
-        <video src="app/video/video-sample.mp4" autoplay loop width="400" height="270" class="mac mac__layer0 mac__video"></video>
+        <video src="app/video/video-sample.mp4" autoplay loop class="mac mac__layer0 mac__video"></video>
+    </div>
+    <div class="title__nextpage">
+        <p>потяните вверх</p>
+        <div class="nextpage__img"></div>
     </div>
 </section>
 <section class="page-height navigation">
     <div class="navigation__partner navigation__style">
         <p class="navigation__heading">Я — Партнер</p>
         <p class="navigation__description">Хочу повысить доход от сайта</p>
+        <button class="navigation__link">выбрать</button>
     </div>
     <div class="navigation__advertiser navigation__style">
         <p class="navigation__heading">Я — Рекламодатель</p>
         <p class="navigation__description">Хочу расширить целевую аудиторию</p>
+        <button class="navigation__link">выбрать</button>
     </div>
 </section>
 
