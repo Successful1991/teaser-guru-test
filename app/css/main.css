@@ -498,7 +498,8 @@ h1 {
     width: 100vw;
     padding-top: 55px !important;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+    overflow: hidden; }
     .title__text {
       width: 100%;
       font-size: 12px;
