@@ -449,9 +449,12 @@ h1{
   .menu{
     display: none;
     flex-direction: column;
-    height: auto;
+    height: 200px;
     &__list{
       font-size: 18px;
+    }
+    &__img{
+      display: none;
     }
   }
   .list__item{
