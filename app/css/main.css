@@ -65,7 +65,8 @@ h1 {
         -ms-flex-align: center;
             align-items: center;
     height: auto;
-    width: auto; }
+    width: auto;
+    top: 0; }
     .heading__logo-mobile {
       display: none;
       height: 30px;
@@ -466,7 +467,10 @@ h1 {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: 0 15px 40px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     height: 55px; }
     .heading__logo-mobile {
       display: block;
@@ -487,8 +491,10 @@ h1 {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin: 0;
-    height: calc( 100vh - 85px); }
+    height: 100vh;
+    padding-top: 55px !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
     .title__text {
       width: 100%;
       font-size: 12px;
