@@ -128,7 +128,7 @@ h1 {
 
 .menu {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   -webkit-box-pack: center;
@@ -459,8 +459,7 @@ h1 {
 @media screen and (max-width: 420px) {
   body {
     background: none;
-    padding: 0;
-    overflow: visible; }
+    padding: 0; }
   h1 {
     font-size: 4.2vh; }
   .heading {
@@ -471,7 +470,7 @@ h1 {
     margin: 0;
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 55px;
     padding: 0 15px !important;
     -webkit-box-sizing: border-box;

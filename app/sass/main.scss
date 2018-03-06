@@ -105,7 +105,7 @@ h1{
 }
 .menu{
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   justify-content: center;
@@ -338,7 +338,6 @@ h1{
   body{
     background: none;
     padding: 0;
-    overflow: visible;
   }
   h1{
     font-size: 4.2vh;
@@ -348,7 +347,7 @@ h1{
     margin: 0;
     position: absolute;
     top:0;
-    width: 100%;
+    width: 100vw;
     height: 55px;
     padding: 0 15px!important;
     box-sizing: border-box;
