@@ -348,7 +348,7 @@ h1{
     font-size: 4.2vh;
   }
   .heading{
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
     position: absolute;
     top:0;
@@ -363,11 +363,11 @@ h1{
     &__logo-img{
       width: 126px;
     }
-    &__menu{
-      position: relative;
-      top:0;
-      right: 0;
-    }
+    //&__menu{
+    //  position: relative;
+    //  top:0;
+    //  right: 0;
+    //}
   }
   .title{
     flex-direction: column;
