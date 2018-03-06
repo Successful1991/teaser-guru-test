@@ -71,8 +71,8 @@ h1 {
     .heading__logo-mobile {
       display: none;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 12px;
+      left: 16px;
       height: 30px;
       width: 30px;
       background: #ffffff url("../img/logo-mobile.png") center no-repeat; }
@@ -85,7 +85,9 @@ h1 {
       text-transform: uppercase; }
 
 .heading__menu {
-  position: relative;
+  position: absolute;
+  top: 12px;
+  right: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
