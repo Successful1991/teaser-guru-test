@@ -545,10 +545,9 @@ h1 {
   .page-height {
     padding: 0; }
   .mac {
-    width: auto;
-    max-width: 100vw;
+    max-width: 90vw;
     top: 0;
-    left: 0; }
+    left: 5vw; }
   .mac__video {
     display: none;
     width: 63.3%;
