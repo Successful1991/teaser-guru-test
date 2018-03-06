@@ -13,7 +13,7 @@ $(document).ready(function(){
     updateHash: true,
     touchScroll:true
   };
-  if( $(window).width() < 420 ) {
+  if( window.matchMedia('(max-width: 420px)').matches) {
     $.scrollify(scrollifyOptions);
   }
 
@@ -105,7 +105,7 @@ $(document).ready(function(){
   // ----------------- click to scroll ---------------------------
 
   $(".title__nextpage").click(function () {
-    tl.to($(".nextpage__img"),1,{ rotation:180}).reverse(10);
+    tl.to($(".nextpage__img"),1,{ rotation:180}).reverse(15);
     setTimeout(function () {
       $.scrollify.next();
     }, 400);

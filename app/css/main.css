@@ -461,7 +461,7 @@ h1 {
     padding: 0;
     overflow: visible; }
   h1 {
-    font-size: 32px; }
+    font-size: 5vh; }
   .heading {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -540,6 +540,7 @@ h1 {
   .page-height {
     padding: 0; }
   .mac {
+    width: 100%;
     max-width: 393px; }
   .mac__video {
     width: 63.3%;
