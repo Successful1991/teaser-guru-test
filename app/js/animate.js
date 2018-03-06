@@ -13,9 +13,8 @@ $(document).ready(function(){
     updateHash: true,
     touchScroll:true
   };
-  if( window.matchMedia('(max-width: 420px)').matches) {
-    var fet = $(".mac__video").attr( "autoplay", false);
-    console.log(fet);
+  if( window.matchMedia('(max-width: 421px)').matches) {
+    $(".mac__video").attr( "autoplay", false);
     $.scrollify(scrollifyOptions);
   }
 
