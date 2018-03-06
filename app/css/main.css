@@ -19,6 +19,7 @@
 
 body {
   height: 96vh;
+  width: 100vw;
   margin: 0;
   background: url("../img/img-text-guru.jpg") bottom left no-repeat;
   overflow: hidden; }
