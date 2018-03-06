@@ -383,6 +383,8 @@ h1{
       height: 30vh;
     }
     &__nextpage{
+      position: absolute;
+      bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -393,6 +395,7 @@ h1{
       font-size: 14px;
       color: #202020;
       text-transform: uppercase;
+
       .nextpage__img{
         height: 22px;
         width: 22px;
@@ -407,6 +410,7 @@ h1{
   .mac{
     width: 100%;
     max-width: 393px;
+    height: 100%;
   }
   .mac__video{
     display: none;

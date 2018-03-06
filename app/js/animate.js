@@ -18,7 +18,6 @@ $(document).ready(function(){
     $.scrollify(scrollifyOptions);
   }
 
-
   // -------------------- setting animation GSAP ------------------
   var tl = new TimelineMax();
   if(window.matchMedia('(min-width: 421px)').matches){
@@ -55,15 +54,15 @@ $(document).ready(function(){
   }
 
   function transitionAnimationFurther() {
-    tl.to( $(".mac__layer1"), 2, { rotation: 60 ,y:-600 ,display: 'none'}, "mac" )
-      .to( $(".mac__layer0"), 1.8, { rotation: 60 ,y:-600, display: 'none'},"mac" )
-      .to( $(".navigation__partner"), 1.5, { rotation: -80 ,y:-900, display: "none", ease: Linear.easeNone }, "-=1.5" )
-      .to( $(".navigation__advertiser"), 1.2, { rotation: 80 ,y:-900, display: "none" ,ease: Linear.easeNone }, "-=1.1" )
-      .to( $(".heading__menu"), 1, { y: -300 , display: "none", ease: Linear.easeNone },"-=0.5" )
-      .to( $(".title__text > h1"), 1, { y: -500 , display: "none", ease: Linear.easeNone}, "-=0.5"  )
+    tl.to( $(".mac__layer1"), 2, { rotation: 60 ,y:-1100 ,display: 'none'}, "mac" )
+      .to( $(".mac__layer0"), 1.8, { rotation: 60 ,y:-1100, display: 'none'},"mac" )
+      .to( $(".navigation__partner"), 1.5, { rotation: -80 ,y:-1800, display: "none", ease: Power3.easeOut }, "-=1.7" )
+      .to( $(".navigation__advertiser"), 1, { rotation: 80 ,y:-1800, display: "none" ,ease: Power3.easeOut }, "-=1" )
+      .to( $(".heading__menu"), 1, { y: -500 , display: "none", ease: Linear.easeNone },"-=0.5" )
+      .to( $(".title__text > h1"), 1, { y: -800 , display: "none", ease: Linear.easeNone}, "-=0.5"  )
       .to( $(".title__text > p"), 0.8, { y: 1200, display: 'none', ease: Linear.easeNone},"-=1")
-      .to( $(".mac__layer2,.mac__layer3,.mac__layer4 "), 1, { animationIterationCount: 0, y: 800 ,display: 'none' },"-=0.5")
-      .to( $(".heading__logo"), 1, { height: 90+"vh", width: 100+"vw", position: "absolute" , ease: Linear.easeNone} );
+      .to( $(".mac__layer2,.mac__layer3,.mac__layer4 "), 1, { animationIterationCount: 0, y: 800 ,display: 'none', ease:Power3.easeOut },"-=0.5")
+      .to( $(".heading__logo"), 1, { top: 40+"vh", left: 40+"vw", position: "absolute" , ease: Linear.easeNone} );
   }
   $(".navigation__partner, .navigation__advertiser").click(function() {transitionAnimationFurther()});
   $(".item__link").mouseover(function () {
@@ -106,7 +105,7 @@ $(document).ready(function(){
   // ----------------- click to scroll ---------------------------
 
   $(".title__nextpage").click(function () {
-    tl.to($(".nextpage__img"),1,{ rotation:180}).reverse(15);
+    tl.to($(".nextpage__img"),1,{ rotation:180}).reverse(20);
     setTimeout(function () {
       $.scrollify.next();
     }, 400);
