@@ -14,6 +14,8 @@ $(document).ready(function(){
     touchScroll:true
   };
   if( window.matchMedia('(max-width: 420px)').matches) {
+    var fet = $(".mac__video").attr( "autoplay", false);
+    console.log(fet);
     $.scrollify(scrollifyOptions);
   }
 
