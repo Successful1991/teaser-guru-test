@@ -70,6 +70,9 @@ h1 {
     top: 0; }
     .heading__logo-mobile {
       display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 30px;
       width: 30px;
       background: #ffffff url("../img/logo-mobile.png") center no-repeat; }
@@ -545,9 +548,9 @@ h1 {
   .page-height {
     padding: 0; }
   .mac {
-    max-width: 90vw;
+    max-width: 80vw;
     top: 0;
-    left: 5vw; }
+    left: 10vw; }
   .mac__video {
     display: none;
     width: 63.3%;
