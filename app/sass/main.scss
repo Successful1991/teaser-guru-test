@@ -65,10 +65,13 @@ h1{
     &-name{
       position: absolute;
       //top:0;
+      width: 80px;
+      left: calc( 50% - 40px );
       margin: 0 auto;
       opacity: 0;
       font-family: "Gotham Pro Medium";
       font-size: 18px;
+      text-align: center;
       text-transform: uppercase;
     }
   }
