@@ -78,7 +78,7 @@ h1 {
       background: #ffffff url("../img/logo-mobile.png") center no-repeat; }
     .heading__logo-name {
       position: absolute;
-      margin: 0;
+      margin: 0 auto;
       opacity: 0;
       font-family: "Gotham Pro Medium";
       font-size: 18px;
