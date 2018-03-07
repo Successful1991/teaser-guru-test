@@ -47,7 +47,7 @@ $(document).ready(function(){
 
   function openMenu() {
     tl.fromTo($(".heading__logo"), 0,{ display: "flex"}, {display: "none"})
-      .fromTo($(".heading"), 0,{ position: "static"}, {position: "relative", justifyContent:"flex-end", zIndex: 1000})
+      .fromTo($(".heading"), 0,{ position: "static"}, {position: "relative", justifyContent:"flex-end", zIndex: 1010})
       .fromTo($(".menu"), 0.5,{ display: "none", x: -1000}, {display: "flex" , x:0 })
       .fromTo($(".menu__img"), 0.8,{x: -1000},{ x: 0, ease: Linear.easeNone},"+=1")
       .staggerFromTo($(".menu__list > li"), 0.4,{ opacity: 0, x: -100}, {opacity: 1, x: 0},0.5);
@@ -97,7 +97,6 @@ $(document).ready(function(){
           .fromTo($(".heading__logo-name"),1.5,{opacity: 1},{opacity: 0 },1)
           .fromTo($(".heading__logo-img"),1.5,{opacity: 0 },{opacity: 1},1)
           .fromTo($(".heading__logo-mobile"),1.5,{opacity: 1 },{opacity: 0},1)
-
           .fromTo($(".menu"), 1.5,{ opacity: 1 ,display: "flex"}, {opacity: 0 ,display: "none"});
       }
     });
@@ -105,7 +104,7 @@ $(document).ready(function(){
   // ----------------- click to scroll ---------------------------
 
   $(".title__nextpage").click(function () {
-    tl.to($(".nextpage__img"),1,{ rotation:180}).reverse(20);
+    tl.to($(".nextpage__img"),1,{ rotation:180}).reverse(50);
     setTimeout(function () {
       $.scrollify.next();
     }, 400);

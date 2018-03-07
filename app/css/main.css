@@ -89,8 +89,8 @@ h1 {
 
 .heading__menu {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 30px;
+  right: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,7 +162,8 @@ h1 {
             justify-content: center;
     width: 50%;
     height: 100%;
-    background: url("../img/img-menu-bg.jpg") no-repeat; }
+    background: url("../img/img-menu-bg.jpg") no-repeat;
+    background-size: cover; }
   .menu__list {
     width: 50%;
     height: 100%;
@@ -488,6 +489,9 @@ h1 {
       opacity: 0; }
     .heading__logo-img {
       width: 126px; }
+    .heading__menu {
+      top: 12px;
+      right: 16px; }
   .title {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -79,8 +79,8 @@ h1{
   // menu style
 .heading__menu{
   position: absolute;
-  top:12px;
-  right: 16px;
+  top:30px;
+  right: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,6 +129,7 @@ h1{
     width: 50%;
     height: 100%;
     background: url("../img/img-menu-bg.jpg") no-repeat;
+    background-size: cover;
   }
   &__list{
     width: 50%;
@@ -367,11 +368,10 @@ h1{
     &__logo-img{
       width: 126px;
     }
-    //&__menu{
-    //  position: relative;
-    //  top:0;
-    //  right: 0;
-    //}
+    &__menu{
+      top:12px;
+      right: 16px;
+    }
   }
   .title{
     flex-direction: column;
