@@ -61,8 +61,8 @@ $(document).ready(function(){
       .to( $(".heading__menu"), 1, { y: -500 , display: "none", ease: Linear.easeNone },"-=0.5" )
       .to( $(".title__text > h1"), 1, { y: -800 , display: "none", ease: Linear.easeNone}, "-=0.5"  )
       .to( $(".title__text > p"), 0.8, { y: 1200, display: 'none', ease: Linear.easeNone},"-=1")
-      .to( $(".mac__layer2,.mac__layer3,.mac__layer4 "), 1, { animationIterationCount: 0, y: 800 ,display: 'none', ease:Power3.easeOut },"-=0.5")
-      .to( $(".heading__logo"), 1, { top: 40+"vh", left: 40+"vw", position: "absolute" , ease: Linear.easeNone} );
+      .to( $(".mac__layer2,.mac__layer3,.mac__layer4 "), 1, { animationIterationCount: 0, y: 1300 ,display: 'none', ease:Power3.easeOut },"-=0.5")
+      .to( $(".heading__logo"), 1, { top: 40+"vh", left: 35+"vw", position: "absolute" , ease: Linear.easeNone} );
   }
   $(".navigation__partner, .navigation__advertiser").click(function() {transitionAnimationFurther()});
   $(".item__link").mouseover(function () {
