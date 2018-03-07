@@ -13,14 +13,14 @@ $(document).ready(function(){
     updateHash: true,
     touchScroll:true
   };
-  if( window.matchMedia('(max-width: 421px)').matches) {
+  if( window.matchMedia('(max-width: 769px)').matches) {
     $(".mac__video").attr( "autoplay", false);
     $.scrollify(scrollifyOptions);
   }
 
   // -------------------- setting animation GSAP ------------------
   var tl = new TimelineMax();
-  if(window.matchMedia('(min-width: 421px)').matches){
+  if(window.matchMedia('(min-width: 769px)').matches){
 
   function animateFirstLoadingPage() {
     tl.fromTo( $(".heading"), 1, { y: -300},{y: 0},1 )
@@ -81,7 +81,7 @@ $(document).ready(function(){
     $(this).css("transform","translateY(0)");
   });
   } // --------------------- animation for screen width max 420 ------------------------
-  if(window.matchMedia('(max-width: 420px)').matches){
+  if(window.matchMedia('(max-width: 768px)').matches){
     $("#menu__burger").click( function () {
       var inputCheck = $("#menu__burger").prop("checked");
       console.log("checked = " , inputCheck);
