@@ -486,6 +486,11 @@ h1 {
     padding: 0 15px !important;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
+    .heading__logo {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .heading__logo-mobile {
       display: block;
       opacity: 0; }
