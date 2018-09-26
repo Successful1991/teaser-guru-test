@@ -49,7 +49,7 @@ h1 {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   z-index: 1005;
   height: 90px; }
   .heading__logo {
@@ -466,6 +466,22 @@ h1 {
   100% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); } }
+
+@media screen and (max-width: 1200px) {
+  .title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .title__text {
+      width: auto; }
+    .title__mac {
+      width: 100%; } }
 
 @media screen and (max-width: 768px) {
   body {
